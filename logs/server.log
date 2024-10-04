@@ -1,0 +1,32 @@
+Oct 04, 2024 11:58:34 AM server.ServerLogger log
+INFO: Received: print
+Oct 04, 2024 11:58:34 AM server.ServerLogger log
+INFO: Processed command: print
+Oct 04, 2024 11:58:42 AM server.ServerLogger log
+INFO: Received: put key6 value6
+Oct 04, 2024 11:58:42 AM server.ServerLogger log
+INFO: Processed command: put key6 value6
+Oct 04, 2024 11:58:53 AM server.ServerLogger log
+INFO: Received: put 4+5 9
+Oct 04, 2024 11:58:53 AM server.ServerLogger log
+INFO: Processed command: put 4+5 9
+Oct 04, 2024 11:58:59 AM server.ServerLogger log
+INFO: Received: get 4+5
+Oct 04, 2024 11:58:59 AM server.ServerLogger log
+INFO: Processed command: get 4+5
+Oct 04, 2024 11:59:06 AM server.ServerLogger log
+INFO: Received: print
+Oct 04, 2024 11:59:06 AM server.ServerLogger log
+INFO: Processed command: print
+Oct 04, 2024 11:59:15 AM server.ServerLogger log
+INFO: Received: remove key4
+Oct 04, 2024 11:59:15 AM server.ServerLogger log
+INFO: Processed command: remove key4
+Oct 04, 2024 11:59:18 AM server.ServerLogger log
+INFO: Received: print
+Oct 04, 2024 11:59:18 AM server.ServerLogger log
+INFO: Processed command: print
+Oct 04, 2024 11:59:20 AM server.ServerLogger log
+INFO: Received: exit
+Oct 04, 2024 11:59:20 AM server.ServerLogger log
+INFO: Processed command: exit
