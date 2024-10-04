@@ -1,5 +1,11 @@
 ## Project-1
 ### Folder structure
+```bash
+project
+logs
+client.log
+server.logs
+```
 1. server folder
 2. client folder
 ### Role of each class

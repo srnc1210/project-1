@@ -1,0 +1,32 @@
+Oct 04, 2024 11:58:34 AM client.ClientLogger log
+INFO: Sent: print
+Oct 04, 2024 11:58:34 AM client.ClientLogger log
+INFO: Received: {key1=value1, key2=value2, key5=value5, key3=value3, key4=value4}
+Oct 04, 2024 11:58:42 AM client.ClientLogger log
+INFO: Sent: put key6 value6
+Oct 04, 2024 11:58:42 AM client.ClientLogger log
+INFO: Received: Put: (key6, value6)
+Oct 04, 2024 11:58:53 AM client.ClientLogger log
+INFO: Sent: put 4+5 9
+Oct 04, 2024 11:58:53 AM client.ClientLogger log
+INFO: Received: Put: (4+5, 9)
+Oct 04, 2024 11:58:59 AM client.ClientLogger log
+INFO: Sent: get 4+5
+Oct 04, 2024 11:58:59 AM client.ClientLogger log
+INFO: Received: Get: 9
+Oct 04, 2024 11:59:06 AM client.ClientLogger log
+INFO: Sent: print
+Oct 04, 2024 11:59:06 AM client.ClientLogger log
+INFO: Received: {key1=value1, key2=value2, key5=value5, key6=value6, key3=value3, key4=value4, 4+5=9}
+Oct 04, 2024 11:59:15 AM client.ClientLogger log
+INFO: Sent: remove key4
+Oct 04, 2024 11:59:15 AM client.ClientLogger log
+INFO: Received: Removed: key4
+Oct 04, 2024 11:59:18 AM client.ClientLogger log
+INFO: Sent: print
+Oct 04, 2024 11:59:18 AM client.ClientLogger log
+INFO: Received: {key1=value1, key2=value2, key5=value5, key6=value6, key3=value3, 4+5=9}
+Oct 04, 2024 11:59:20 AM client.ClientLogger log
+INFO: Sent: exit
+Oct 04, 2024 11:59:20 AM client.ClientLogger log
+INFO: Received: Received exit command. Server continues to run.
