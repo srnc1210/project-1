@@ -30,3 +30,39 @@ Oct 04, 2024 11:59:20 AM client.ClientLogger log
 INFO: Sent: exit
 Oct 04, 2024 11:59:20 AM client.ClientLogger log
 INFO: Received: Received exit command. Server continues to run.
+Oct 04, 2024 12:22:41 PM client.ClientLogger log
+INFO: Sent: print
+Oct 04, 2024 12:22:42 PM client.ClientLogger log
+INFO: Received: {key1=value1, key2=value2, key5=value5, key3=value3, key4=value4}
+Oct 04, 2024 12:22:48 PM client.ClientLogger log
+INFO: Sent: get key3
+Oct 04, 2024 12:22:48 PM client.ClientLogger log
+INFO: Received: Get: value3
+Oct 04, 2024 12:22:54 PM client.ClientLogger log
+INFO: Sent: get key4
+Oct 04, 2024 12:22:54 PM client.ClientLogger log
+INFO: Received: Get: value4
+Oct 04, 2024 12:23:01 PM client.ClientLogger log
+INFO: Sent: put key6 value6
+Oct 04, 2024 12:23:01 PM client.ClientLogger log
+INFO: Received: Put: (key6, value6)
+Oct 04, 2024 12:23:04 PM client.ClientLogger log
+INFO: Sent: exit
+Oct 04, 2024 12:23:04 PM client.ClientLogger log
+INFO: Received: Received exit command. Server continues to run.
+Oct 04, 2024 12:23:41 PM client.ClientLogger log
+INFO: Sent: print
+Oct 04, 2024 12:23:41 PM client.ClientLogger log
+INFO: Received: {key1=value1, key2=value2, key5=value5, key3=value3, key4=value4}
+Oct 04, 2024 12:23:49 PM client.ClientLogger log
+INFO: Sent: get key6
+Oct 04, 2024 12:23:49 PM client.ClientLogger log
+INFO: Received: ERROR: Key not found
+Oct 04, 2024 12:23:55 PM client.ClientLogger log
+INFO: Sent: print
+Oct 04, 2024 12:23:55 PM client.ClientLogger log
+INFO: Received: {key1=value1, key2=value2, key5=value5, key3=value3, key4=value4}
+Oct 04, 2024 12:23:58 PM client.ClientLogger log
+INFO: Sent: exit
+Oct 04, 2024 12:23:58 PM client.ClientLogger log
+INFO: Received: Received exit command. Server continues to run.
