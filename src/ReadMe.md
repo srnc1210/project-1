@@ -42,5 +42,5 @@ src
 > Here key and value are String variables even if 1 or 2+4 is inputted, the code will treat it as a String.
 1. For the Put command use: ```put <key> <value>```
 2. For the Get command use: ```get <key>```
-3. For the remove command use: ```remove <key>```
-4. For printing the map use: ```print```
+3. For the Remove command use: ```remove <key>```
+4. For Printing the map use: ```print```
