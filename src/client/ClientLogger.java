@@ -13,10 +13,10 @@ public class ClientLogger {
     static {
         try {
             // Ensure the logs directory exists
-            Files.createDirectories(Paths.get("logs"));
+            Files.createDirectories(Paths.get("src/logs"));
 
             // Use "logs/client.log" as the log file path
-            FileHandler fileHandler = new FileHandler("logs/client.log", true);
+            FileHandler fileHandler = new FileHandler("src/logs/client.log", true);
             fileHandler.setFormatter(new SimpleFormatter());
             logger.addHandler(fileHandler);
         } catch (IOException e) {
