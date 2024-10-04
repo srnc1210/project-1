@@ -30,3 +30,23 @@ Oct 04, 2024 11:59:20 AM server.ServerLogger log
 INFO: Received: exit
 Oct 04, 2024 11:59:20 AM server.ServerLogger log
 INFO: Processed command: exit
+Oct 04, 2024 12:22:41 PM server.ServerLogger log
+INFO: Received: print
+Oct 04, 2024 12:22:42 PM server.ServerLogger log
+INFO: Processed command: print
+Oct 04, 2024 12:22:48 PM server.ServerLogger log
+INFO: Received: get key3
+Oct 04, 2024 12:22:48 PM server.ServerLogger log
+INFO: Processed command: get key3
+Oct 04, 2024 12:22:54 PM server.ServerLogger log
+INFO: Received: get key4
+Oct 04, 2024 12:22:54 PM server.ServerLogger log
+INFO: Processed command: get key4
+Oct 04, 2024 12:23:01 PM server.ServerLogger log
+INFO: Received: put key6 value6
+Oct 04, 2024 12:23:01 PM server.ServerLogger log
+INFO: Processed command: put key6 value6
+Oct 04, 2024 12:23:04 PM server.ServerLogger log
+INFO: Received: exit
+Oct 04, 2024 12:23:04 PM server.ServerLogger log
+INFO: Processed command: exit
