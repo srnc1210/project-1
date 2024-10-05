@@ -25,7 +25,7 @@ public class TCPHandler extends Thread {
                 switch (command) {
                     case "put":
                         if (parts.length == 3) {
-                            keyValueStore.put(Integer.parseInt(parts[1]), parts[2]);
+                            keyValueStore.put(parts[1], parts[2]);
                             out.println("OK");
                         } else {
                             out.println("ERROR: Invalid PUT command");
@@ -33,7 +33,7 @@ public class TCPHandler extends Thread {
                         break;
                     case "get":
                         if (parts.length == 2) {
-                            String value = keyValueStore.get(Integer.parseInt(parts[1]));
+                            String value = keyValueStore.get(parts[1]);
                             out.println(value != null ? value : "ERROR: Key not found");
                         } else {
                             out.println("ERROR: Invalid GET command");
@@ -41,8 +41,8 @@ public class TCPHandler extends Thread {
                         break;
                     case "remove":
                         if (parts.length == 2) {
-                            if (keyValueStore.get(Integer.parseInt(parts[1])) != null) {
-                                keyValueStore.remove(Integer.parseInt(parts[1]));
+                            if (keyValueStore.get(parts[1]) != null) {
+                                keyValueStore.remove(parts[1]);
                                 out.println("Removed: " + parts[1]);
                             } else {
                                 out.println("ERROR: Key not found");

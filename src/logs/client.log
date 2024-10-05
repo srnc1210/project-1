@@ -66,39 +66,3 @@ Oct 04, 2024 12:23:58 PM client.ClientLogger log
 INFO: Sent: exit
 Oct 04, 2024 12:23:58 PM client.ClientLogger log
 INFO: Received: Received exit command. Server continues to run.
-Oct 04, 2024 5:02:32 PM client.ClientLogger log
-INFO: Sent: print
-Oct 04, 2024 5:02:32 PM client.ClientLogger log
-INFO: Received: {1=A, 2=B, 3=C, 4=D, 5=E}
-Oct 04, 2024 5:02:46 PM client.ClientLogger log
-INFO: Sent: put 6+7 Y
-Oct 04, 2024 5:02:46 PM client.ClientLogger log
-INFO: Received: null
-Oct 04, 2024 5:02:58 PM client.ClientLogger log
-INFO: Sent: put 6 F
-Oct 04, 2024 5:02:58 PM client.ClientLogger log
-INFO: Received: null
-Oct 04, 2024 5:03:03 PM client.ClientLogger log
-INFO: Sent: print
-Oct 04, 2024 5:03:03 PM client.ClientLogger log
-INFO: Received: null
-Oct 04, 2024 5:03:27 PM client.ClientLogger log
-INFO: Sent: print
-Oct 04, 2024 5:03:27 PM client.ClientLogger log
-INFO: Received: null
-Oct 04, 2024 5:09:35 PM client.ClientLogger log
-INFO: Sent: print
-Oct 04, 2024 5:09:36 PM client.ClientLogger log
-INFO: Received: {1=A, 2=B, 3=C, 4=D, 5=E}
-Oct 04, 2024 5:09:46 PM client.ClientLogger log
-INFO: Sent: put 5+6 I
-Oct 04, 2024 5:09:46 PM client.ClientLogger log
-INFO: Received: null
-Oct 04, 2024 5:09:56 PM client.ClientLogger log
-INFO: Sent: get
-Oct 04, 2024 5:09:56 PM client.ClientLogger log
-INFO: Received: null
-Oct 04, 2024 5:10:10 PM client.ClientLogger log
-INFO: Sent: print
-Oct 04, 2024 5:10:10 PM client.ClientLogger log
-INFO: Received: null

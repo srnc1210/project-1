@@ -4,32 +4,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class KeyValue {
-    private final Map<Integer, String> map;
+    private final Map<String, String> map;
 
     public KeyValue() {
         map = new HashMap<>();
         // Initialize with 5 key-value pairs
-        map.put(1, "A");
-        map.put(2, "B");
-        map.put(3, "C");
-        map.put(4, "D");
-        map.put(5, "E");
+        map.put("key1", "value1");
+        map.put("key2", "value2");
+        map.put("key3", "value3");
+        map.put("key4", "value4");
+        map.put("key5", "value5");
     }
 
-    public synchronized void put(int key, String value) {
+    public synchronized void put(String key, String value) {
         map.put(key, value);
     }
 
-    public synchronized String get(int key) {
+    public synchronized String get(String key) {
         return map.get(key);
     }
 
-    public synchronized void remove(int key) {
+    public synchronized void remove(String key) {
         map.remove(key);
     }
 
     // New method to expose the map for printing
-    public synchronized Map<Integer, String> getMap() {
+    public synchronized Map<String, String> getMap() {
         return map;
     }
 }

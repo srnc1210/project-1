@@ -1,14 +1,13 @@
 package client;
 
 import java.io.*;
-// import java.net.SocketException;
 
 public class ClientApp {
     private static final int TIMEOUT_MS = 5000;  // Set timeout to 5 seconds
 
     public static void main(String[] args) {
         if (args.length < 3) {
-            System.out.println("Usage: java client.ClientApp <server_address> <port> <protocol>");
+            System.out.println("Usage: java client.ClientApp <host-name> <port-number> <protocol>");
             return;
         }
 
@@ -32,11 +31,10 @@ public class ClientApp {
                 String command;
                 while ((command = console.readLine()) != null) {
                     app.sendRequest(command);
-                    String response = app.receiveResponse();
-                    if (response == null) {
-                        System.out.println("Server did not respond. Please try again.");
-                    } else {
-                        System.out.println("Server response: " + response);
+                    System.out.println("Server response: " + app.receiveResponse());
+                    if (command.equals("exit")) {
+                        System.out.println("Disconnected from server.");
+                        break;
                     }
                 }
             } catch (IOException e) {

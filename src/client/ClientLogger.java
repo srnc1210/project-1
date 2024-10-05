@@ -12,9 +12,10 @@ public class ClientLogger {
 
     static {
         try {
-            // Storing the logs in the src/logs/client.log
-            Files.createDirectories(Paths.get("src/logs")); //Checking if the folder path exists
-            //creating the file if it doesn't exit or else appending to the file.
+            // Ensure the logs directory exists
+            Files.createDirectories(Paths.get("src/logs"));
+
+            // Use "logs/client.log" as the log file path
             FileHandler fileHandler = new FileHandler("src/logs/client.log", true);
             fileHandler.setFormatter(new SimpleFormatter());
             logger.addHandler(fileHandler);

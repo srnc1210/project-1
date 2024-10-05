@@ -28,7 +28,7 @@ public class UDPHandler implements Runnable {
                 switch (action) {
                     case "put":
                         if (parts.length == 3) {
-                            keyValueStore.put(Integer.parseInt(parts[1]), parts[2]);
+                            keyValueStore.put(parts[1], parts[2]);
                             response = "Put: (" + parts[1] + ", " + parts[2] + ")";
                         } else {
                             response = "Invalid put command format. Use: put <key> <value>";
@@ -36,7 +36,7 @@ public class UDPHandler implements Runnable {
                         break;
                     case "get":
                         if (parts.length == 2) {
-                            String value = keyValueStore.get(Integer.parseInt(parts[1]));
+                            String value = keyValueStore.get(parts[1]);
                             response = "Get: " + (value != null ? value : "Key not found");
                         } else {
                             response = "Invalid get command format. Use: get <key>";
@@ -44,8 +44,8 @@ public class UDPHandler implements Runnable {
                         break;
                     case "remove":
                         if (parts.length == 2) {
-                            if (keyValueStore.get(Integer.parseInt(parts[1])) != null) {
-                                keyValueStore.remove(Integer.parseInt(parts[1]));
+                            if (keyValueStore.get(parts[1]) != null) {
+                                keyValueStore.remove(parts[1]);
                                 response = "Removed: " + parts[1];
                             } else {
                                 response = "ERROR: Key not found";
