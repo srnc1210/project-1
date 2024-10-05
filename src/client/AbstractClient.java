@@ -13,5 +13,5 @@ public abstract class AbstractClient {
 
     public abstract void sendRequest(String request) throws IOException;
     public abstract String receiveResponse() throws IOException;
-    public abstract void close() throws IOException;  // Ensure close method is defined here
+    public abstract void close() throws IOException;
 }

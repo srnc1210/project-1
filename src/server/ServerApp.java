@@ -6,12 +6,13 @@ import java.net.DatagramSocket;
 import java.net.SocketException;
 
 public class ServerApp {
-    private static final boolean running = true;  // Make sure the server runs indefinitely
+    private static final boolean running = true;  // this variable is to keep the server running, if we change the value to false the server will not start.
     private static ServerSocket tcpServerSocket;
     private static DatagramSocket udpSocket;
 
     public static void main(String[] args) {
         if (args.length < 2) {
+            // Usage block, in case there are different parameters used.
             System.out.println("Usage: java server.ServerApp <port> <protocol>");
             return;
         }
@@ -31,6 +32,7 @@ public class ServerApp {
     }
 
     private static void startTCPServer(int port, KeyValue keyValue) {
+        // this method is to start connection with the tcp server
         try {
             tcpServerSocket = new ServerSocket(port);
             System.out.println("TCP Server is running on port " + port);
@@ -60,6 +62,7 @@ public class ServerApp {
     }
 
     private static void startUDPServer(int port, KeyValue keyValue) {
+        // this method is to start connection with the UDP server.
         try {
             udpSocket = new DatagramSocket(port);
             System.out.println("UDP Server is running on port " + port);

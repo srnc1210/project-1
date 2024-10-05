@@ -11,7 +11,7 @@ public class UDPClient extends AbstractClient {
         super(serverAddress, port);
         try {
             socket = new DatagramSocket();
-            socket.setSoTimeout(timeout);  // Set the timeout for the socket
+            socket.setSoTimeout(timeout);  // timeout is set to 5secs
             address = InetAddress.getByName(serverAddress);
         } catch (UnknownHostException e) {
             throw new IOException("Unknown host: " + serverAddress, e);
