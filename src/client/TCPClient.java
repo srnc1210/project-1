@@ -12,7 +12,7 @@ public class TCPClient extends AbstractClient {
         super(serverAddress, port);
         try {
             socket = new Socket(serverAddress, port);
-            socket.setSoTimeout(timeout);  // Set the timeout for the socket
+            socket.setSoTimeout(timeout);  // timeout is 5secs.
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         } catch (UnknownHostException e) {

@@ -1,4 +1,12 @@
 # Project-1
+## Summary
+In this project there is an implementation of a simple client server program that will server as a key-value store (implementing it with HashMap).
+
+The map initializes five values in the map when we connect with the server. There are 4 functions available for accessing the HashMap:
+1. Put (key, value)
+2. Get (key)
+3. Remove (key)
+4. Print
 ## Folder structure
 ```bash
 src
@@ -39,8 +47,9 @@ src
 > Note: Replace <hostname> with server's address (in this example I have used localhost), <port> with desired port number (this will be the same port used for server) and <protocol> with either tcp or udp (same as used for server).
 
 ### Communicating with the server
-> Here key and value are String variables even if 1 or 2+4 is inputted, the code will treat it as a String.
-1. For the Put command use: ```put <key> <value>```
-2. For the Get command use: ```get <key>```
-3. For the remove command use: ```remove <key>```
-4. For printing the map use: ```print```
+> Here key is integer variable and value is String variable. "{1=A, 2=B, 3=C, 4=D, 5=E}", is the initialized map.
+1. For **putting** a key-value pair in the store: ```put <key> <value>```
+2. For **getting** the value based on the input key: ```get <key>```
+3. For **removing** key-value pair: ```remove <key>```
+4. For **printing** the key-value store use: ```print```
+5. For **disconnecting** the client from the server: ```exit```

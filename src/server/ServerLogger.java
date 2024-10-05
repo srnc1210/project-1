@@ -12,10 +12,9 @@ public class ServerLogger {
 
     static {
         try {
-            // Ensure the src/logs directory exists
-            Files.createDirectories(Paths.get("src/logs"));
-
-            // Use "src/logs/server.log" as the log file path
+            // Storing the logs in the src/logs/server.log
+            Files.createDirectories(Paths.get("src/logs")); //Checking if the folder path exists
+            //creating the file if it doesn't exit or else appending to the file.
             FileHandler fileHandler = new FileHandler("src/logs/server.log", true);
             fileHandler.setFormatter(new SimpleFormatter());
             logger.addHandler(fileHandler);
