@@ -28,15 +28,15 @@ public class TCPHandler extends Thread {
                             keyValueStore.put(Integer.parseInt(parts[1]), parts[2]);
                             out.println("OK");
                         } else {
-                            out.println("ERROR: Invalid PUT command");
+                            out.println("Invalid format. Use: put <key> <value>");
                         }
                         break;
                     case "get":
                         if (parts.length == 2) {
                             String value = keyValueStore.get(Integer.parseInt(parts[1]));
-                            out.println(value != null ? value : "ERROR: Key not found");
+                            out.println(value != null ? value : "ERROR: Key not found in map");
                         } else {
-                            out.println("ERROR: Invalid GET command");
+                            out.println("Invalid format. Use: get <key> <value>");
                         }
                         break;
                     case "remove":
@@ -45,20 +45,20 @@ public class TCPHandler extends Thread {
                                 keyValueStore.remove(Integer.parseInt(parts[1]));
                                 out.println("Removed: " + parts[1]);
                             } else {
-                                out.println("ERROR: Key not found");
+                                out.println("ERROR: Key not found in map");
                             }
                         } else {
-                            out.println("ERROR: Invalid REMOVE command");
+                            out.println("Invalid format. Use: remove <key>");
                         }
                         break;
                     case "print":
                         out.println(keyValueStore.getMap().toString());
                         break;
                     case "exit":
-                        out.println("Received exit command. Server continues to run.");
+                        out.println("Disconnecting from server.....");
                         break;
                     default:
-                        out.println("ERROR: Unknown command");
+                        out.println("Unknown command. Use: put <key> <value>, get <key> <value> or remove <key>");
                         break;
                 }
             }

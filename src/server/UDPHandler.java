@@ -20,7 +20,7 @@ public class UDPHandler implements Runnable {
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                 socket.receive(packet);
                 String command = new String(packet.getData(), 0, packet.getLength());
-                ServerLogger.log("Received: " + command);
+                ServerLogger.log("Message received from client: " + command);
                 String[] parts = command.split(" ");
                 String action = parts[0];
                 String response;
@@ -31,15 +31,15 @@ public class UDPHandler implements Runnable {
                             keyValueStore.put(Integer.parseInt(parts[1]), parts[2]);
                             response = "Put: (" + parts[1] + ", " + parts[2] + ")";
                         } else {
-                            response = "Invalid put command format. Use: put <key> <value>";
+                            response = "Invalid format. Use: put <key> <value>";
                         }
                         break;
                     case "get":
                         if (parts.length == 2) {
                             String value = keyValueStore.get(Integer.parseInt(parts[1]));
-                            response = "Get: " + (value != null ? value : "Key not found");
+                            response = "Get: " + (value != null ? value : "Key not found in map");
                         } else {
-                            response = "Invalid get command format. Use: get <key>";
+                            response = "Invalid format. Use: get <key>";
                         }
                         break;
                     case "remove":
@@ -48,26 +48,26 @@ public class UDPHandler implements Runnable {
                                 keyValueStore.remove(Integer.parseInt(parts[1]));
                                 response = "Removed: " + parts[1];
                             } else {
-                                response = "ERROR: Key not found";
+                                response = "ERROR: Key not found in map";
                             }
                         } else {
-                            response = "Invalid remove command format. Use: remove <key>";
+                            response = "Invalid format. Use: remove <key>";
                         }
                         break;
                     case "print":
                         response = keyValueStore.getMap().toString();
                         break;
                     case "exit":
-                        response = "Received exit command. Server continues to run.";
+                        response = "Disconnecting from server.....";
                         break;
                     default:
-                        response = "Unknown command";
+                        response = "Unknown command. Use: put <key> <value>, get <key> <value> or remove <key>";
                 }
 
                 byte[] responseBuffer = response.getBytes();
                 DatagramPacket responsePacket = new DatagramPacket(responseBuffer, responseBuffer.length, packet.getAddress(), packet.getPort());
                 socket.send(responsePacket);
-                ServerLogger.log("Processed command: " + command);
+                ServerLogger.log("Command processed in server: " + command);
             }
         } catch (IOException e) {
             e.printStackTrace();
